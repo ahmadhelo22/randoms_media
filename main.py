@@ -4,6 +4,7 @@ from pyrogram.types import Message, CallbackQuery
 import os
 import requests
 import random
+from flask_app import keep_alive
 from text_for_bot import about_the_bot, start_the_bot, suggestions, the_bots, the_user_helper
 from Scheduling_web import buffer, metricool
 from data import read, write 
@@ -1054,7 +1055,7 @@ async def pages_(bot:Client, msg):
 
 
 if __name__ == '__main__':
-    # keep_alive()
+    keep_alive()
     bot_pyrogram.run()
 
 else:
